@@ -9,9 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "daftar-wilayah-indonesia": "^4.0.3",
+    "evergreen-ui": "^7.1.9",
+    "next": "14.0.3",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.0.3"
+    "react-dom": "^18"
   },
   "devDependencies": {
     "eslint": "^8",
