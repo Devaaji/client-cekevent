@@ -37,6 +37,7 @@ const MainCard = () => {
           alt="Gambar"
           layout="fill"
           objectFit="cover"
+          placeholder="blur"
           objectPosition="center"
           borderRadius={8}
         />
@@ -59,6 +60,7 @@ const MainCard = () => {
           src={ImageExample}
           alt="Gambar"
           layout="responsive"
+          placeholder="blur"
           objectFit="cover"
           objectPosition="center"
         />
