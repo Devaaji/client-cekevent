@@ -1,14 +1,29 @@
-import React from "react";
-import { Button, Pane, SearchInput, SelectMenu } from "evergreen-ui";
+import React, { useEffect, useState } from "react";
+import { Pane } from "evergreen-ui";
 import DashboardSearch from "@/components/Dashboard/DashboardSeach";
+import MainCard from "@/components/MainCard";
 
 export default function Home() {
-  const [selected, setSelected] = React.useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 1000);
+  }, []);
   return (
-    <Pane display="flex" justifyContent="center" alignItems="center">
-      <Pane width="100%" maxWidth="580px">
-        <DashboardSearch />
-      </Pane>
-    </Pane>
+    <>
+      {isLoading ? (
+        <div>Loading...</div>
+      ) : (
+        <Pane display="flex" justifyContent="center" alignItems="center">
+          <Pane width="100%" maxWidth="580px">
+            <DashboardSearch />
+            <MainCard />
+            <MainCard />
+          </Pane>
+        </Pane>
+      )}
+    </>
   );
 }
